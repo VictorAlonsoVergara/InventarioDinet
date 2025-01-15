@@ -149,6 +149,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DbModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\MOV_INVENTARIO.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>

@@ -33,7 +33,7 @@ namespace InventarioDinet.Controllers
                     docRef5: null,
                     fechaTransaccion: null
                 )
-                .Select(item => new MOV_INVENTARIO
+                .Select(item => new Inventory
                 {
                     COD_CIA = item.COD_CIA,
                     COMPANIA_VENTA_3 = item.COMPANIA_VENTA_3,
@@ -79,7 +79,7 @@ namespace InventarioDinet.Controllers
                     docRef5: null,
                     fechaTransaccion: null
                 )
-                .Select(item => new MOV_INVENTARIO
+                .Select(item => new Inventory
                 {
                     COD_CIA = item.COD_CIA,
                     COMPANIA_VENTA_3 = item.COMPANIA_VENTA_3,
@@ -110,7 +110,7 @@ namespace InventarioDinet.Controllers
 
         // POST: Inventory/Create
         [HttpPost]
-        public ActionResult Create(MOV_INVENTARIO inventario)
+        public ActionResult Create(Inventory inventario)
         {
             try
             {
@@ -150,7 +150,7 @@ namespace InventarioDinet.Controllers
                     docRef5: null,
                     fechaTransaccion: null
                 )
-                .Select(item => new MOV_INVENTARIO
+                .Select(item => new Inventory
                 {
                     COD_CIA = item.COD_CIA,
                     COMPANIA_VENTA_3 = item.COMPANIA_VENTA_3,
@@ -175,7 +175,7 @@ namespace InventarioDinet.Controllers
 
         // POST: Inventory/Edit/5
         [HttpPost]
-        public ActionResult Edit(string codCia, string companiaVenta3, string almacenVenta, string tipoMovimiento, string tipoDocumento, string nroDocumento, string codItem2, MOV_INVENTARIO inventario)
+        public ActionResult Edit(Inventory inventario)
         {
             try
             {
@@ -215,7 +215,7 @@ namespace InventarioDinet.Controllers
                     docRef5: null,
                     fechaTransaccion: null
                 )
-                .Select(item => new MOV_INVENTARIO
+                .Select(item => new Inventory
                 {
                     COD_CIA = item.COD_CIA,
                     COMPANIA_VENTA_3 = item.COMPANIA_VENTA_3,
