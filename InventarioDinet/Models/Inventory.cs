@@ -36,7 +36,7 @@ namespace InventarioDinet.Models
         public string ALMACEN_DESTINO { get; set; }
 
         [Display(Name = "Cantidad")]
-        public Nullable<int> CANTIDAD { get; set; }
+        public int? CANTIDAD { get; set; }
 
         [Display(Name = "Documento de Referencia 1")]
         public string DOC_REF_1 { get; set; }
@@ -54,8 +54,8 @@ namespace InventarioDinet.Models
         public string DOC_REF_5 { get; set; }
 
         [Display(Name = "Fecha de Transacción")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         [DataType(DataType.DateTime)]
-        public Nullable<System.DateTime> FECHA_TRANSACCION { get; set; }
+        public DateTime? FECHA_TRANSACCION { get; set; }
     }
 }
