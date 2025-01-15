@@ -29,244 +29,244 @@ namespace InventarioDinet.Models
     
         public virtual DbSet<MOV_INVENTARIO> MOV_INVENTARIO { get; set; }
     
-        public virtual int SP_ACTUALIZACION_INVENTARIO(string cOD_CIA, string cOMPANIA_VENTA_3, string aLMACEN_VENTA, string tIPO_MOVIMIENTO, string tIPO_DOCUMENTO, string nRO_DOCUMENTO, string cOD_ITEM_2, string pROVEEDOR, string aLMACEN_DESTINO, Nullable<int> cANTIDAD, string dOC_REF_1, string dOC_REF_2, string dOC_REF_3, string dOC_REF_4, string dOC_REF_5, Nullable<System.DateTime> fECHA_TRANSACCION)
+        public virtual ObjectResult<SP_CONSULTA_INVENTARIO_Result> SP_CONSULTA_INVENTARIO(string codCia, string companiaVenta3, string almacenVenta, string tipoMovimiento, string tipoDocumento, string nroDocumento, string codItem2, string proveedor, string almacenDestino, Nullable<int> cantidad, string docRef1, string docRef2, string docRef3, string docRef4, string docRef5, Nullable<System.DateTime> fechaTransaccion)
         {
-            var cOD_CIAParameter = cOD_CIA != null ?
-                new ObjectParameter("COD_CIA", cOD_CIA) :
-                new ObjectParameter("COD_CIA", typeof(string));
+            var codCiaParameter = codCia != null ?
+                new ObjectParameter("codCia", codCia) :
+                new ObjectParameter("codCia", typeof(string));
     
-            var cOMPANIA_VENTA_3Parameter = cOMPANIA_VENTA_3 != null ?
-                new ObjectParameter("COMPANIA_VENTA_3", cOMPANIA_VENTA_3) :
-                new ObjectParameter("COMPANIA_VENTA_3", typeof(string));
+            var companiaVenta3Parameter = companiaVenta3 != null ?
+                new ObjectParameter("companiaVenta3", companiaVenta3) :
+                new ObjectParameter("companiaVenta3", typeof(string));
     
-            var aLMACEN_VENTAParameter = aLMACEN_VENTA != null ?
-                new ObjectParameter("ALMACEN_VENTA", aLMACEN_VENTA) :
-                new ObjectParameter("ALMACEN_VENTA", typeof(string));
+            var almacenVentaParameter = almacenVenta != null ?
+                new ObjectParameter("almacenVenta", almacenVenta) :
+                new ObjectParameter("almacenVenta", typeof(string));
     
-            var tIPO_MOVIMIENTOParameter = tIPO_MOVIMIENTO != null ?
-                new ObjectParameter("TIPO_MOVIMIENTO", tIPO_MOVIMIENTO) :
-                new ObjectParameter("TIPO_MOVIMIENTO", typeof(string));
+            var tipoMovimientoParameter = tipoMovimiento != null ?
+                new ObjectParameter("tipoMovimiento", tipoMovimiento) :
+                new ObjectParameter("tipoMovimiento", typeof(string));
     
-            var tIPO_DOCUMENTOParameter = tIPO_DOCUMENTO != null ?
-                new ObjectParameter("TIPO_DOCUMENTO", tIPO_DOCUMENTO) :
-                new ObjectParameter("TIPO_DOCUMENTO", typeof(string));
+            var tipoDocumentoParameter = tipoDocumento != null ?
+                new ObjectParameter("tipoDocumento", tipoDocumento) :
+                new ObjectParameter("tipoDocumento", typeof(string));
     
-            var nRO_DOCUMENTOParameter = nRO_DOCUMENTO != null ?
-                new ObjectParameter("NRO_DOCUMENTO", nRO_DOCUMENTO) :
-                new ObjectParameter("NRO_DOCUMENTO", typeof(string));
+            var nroDocumentoParameter = nroDocumento != null ?
+                new ObjectParameter("nroDocumento", nroDocumento) :
+                new ObjectParameter("nroDocumento", typeof(string));
     
-            var cOD_ITEM_2Parameter = cOD_ITEM_2 != null ?
-                new ObjectParameter("COD_ITEM_2", cOD_ITEM_2) :
-                new ObjectParameter("COD_ITEM_2", typeof(string));
+            var codItem2Parameter = codItem2 != null ?
+                new ObjectParameter("codItem2", codItem2) :
+                new ObjectParameter("codItem2", typeof(string));
     
-            var pROVEEDORParameter = pROVEEDOR != null ?
-                new ObjectParameter("PROVEEDOR", pROVEEDOR) :
-                new ObjectParameter("PROVEEDOR", typeof(string));
+            var proveedorParameter = proveedor != null ?
+                new ObjectParameter("proveedor", proveedor) :
+                new ObjectParameter("proveedor", typeof(string));
     
-            var aLMACEN_DESTINOParameter = aLMACEN_DESTINO != null ?
-                new ObjectParameter("ALMACEN_DESTINO", aLMACEN_DESTINO) :
-                new ObjectParameter("ALMACEN_DESTINO", typeof(string));
+            var almacenDestinoParameter = almacenDestino != null ?
+                new ObjectParameter("almacenDestino", almacenDestino) :
+                new ObjectParameter("almacenDestino", typeof(string));
     
-            var cANTIDADParameter = cANTIDAD.HasValue ?
-                new ObjectParameter("CANTIDAD", cANTIDAD) :
-                new ObjectParameter("CANTIDAD", typeof(int));
+            var cantidadParameter = cantidad.HasValue ?
+                new ObjectParameter("cantidad", cantidad) :
+                new ObjectParameter("cantidad", typeof(int));
     
-            var dOC_REF_1Parameter = dOC_REF_1 != null ?
-                new ObjectParameter("DOC_REF_1", dOC_REF_1) :
-                new ObjectParameter("DOC_REF_1", typeof(string));
+            var docRef1Parameter = docRef1 != null ?
+                new ObjectParameter("docRef1", docRef1) :
+                new ObjectParameter("docRef1", typeof(string));
     
-            var dOC_REF_2Parameter = dOC_REF_2 != null ?
-                new ObjectParameter("DOC_REF_2", dOC_REF_2) :
-                new ObjectParameter("DOC_REF_2", typeof(string));
+            var docRef2Parameter = docRef2 != null ?
+                new ObjectParameter("docRef2", docRef2) :
+                new ObjectParameter("docRef2", typeof(string));
     
-            var dOC_REF_3Parameter = dOC_REF_3 != null ?
-                new ObjectParameter("DOC_REF_3", dOC_REF_3) :
-                new ObjectParameter("DOC_REF_3", typeof(string));
+            var docRef3Parameter = docRef3 != null ?
+                new ObjectParameter("docRef3", docRef3) :
+                new ObjectParameter("docRef3", typeof(string));
     
-            var dOC_REF_4Parameter = dOC_REF_4 != null ?
-                new ObjectParameter("DOC_REF_4", dOC_REF_4) :
-                new ObjectParameter("DOC_REF_4", typeof(string));
+            var docRef4Parameter = docRef4 != null ?
+                new ObjectParameter("docRef4", docRef4) :
+                new ObjectParameter("docRef4", typeof(string));
     
-            var dOC_REF_5Parameter = dOC_REF_5 != null ?
-                new ObjectParameter("DOC_REF_5", dOC_REF_5) :
-                new ObjectParameter("DOC_REF_5", typeof(string));
+            var docRef5Parameter = docRef5 != null ?
+                new ObjectParameter("docRef5", docRef5) :
+                new ObjectParameter("docRef5", typeof(string));
     
-            var fECHA_TRANSACCIONParameter = fECHA_TRANSACCION.HasValue ?
-                new ObjectParameter("FECHA_TRANSACCION", fECHA_TRANSACCION) :
-                new ObjectParameter("FECHA_TRANSACCION", typeof(System.DateTime));
+            var fechaTransaccionParameter = fechaTransaccion.HasValue ?
+                new ObjectParameter("fechaTransaccion", fechaTransaccion) :
+                new ObjectParameter("fechaTransaccion", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_ACTUALIZACION_INVENTARIO", cOD_CIAParameter, cOMPANIA_VENTA_3Parameter, aLMACEN_VENTAParameter, tIPO_MOVIMIENTOParameter, tIPO_DOCUMENTOParameter, nRO_DOCUMENTOParameter, cOD_ITEM_2Parameter, pROVEEDORParameter, aLMACEN_DESTINOParameter, cANTIDADParameter, dOC_REF_1Parameter, dOC_REF_2Parameter, dOC_REF_3Parameter, dOC_REF_4Parameter, dOC_REF_5Parameter, fECHA_TRANSACCIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_CONSULTA_INVENTARIO_Result>("SP_CONSULTA_INVENTARIO", codCiaParameter, companiaVenta3Parameter, almacenVentaParameter, tipoMovimientoParameter, tipoDocumentoParameter, nroDocumentoParameter, codItem2Parameter, proveedorParameter, almacenDestinoParameter, cantidadParameter, docRef1Parameter, docRef2Parameter, docRef3Parameter, docRef4Parameter, docRef5Parameter, fechaTransaccionParameter);
         }
     
-        public virtual ObjectResult<SP_CONSULTA_INVENTARIO_Result> SP_CONSULTA_INVENTARIO(string cOD_CIA, string cOMPANIA_VENTA_3, string aLMACEN_VENTA, string tIPO_MOVIMIENTO, string tIPO_DOCUMENTO, string nRO_DOCUMENTO, string cOD_ITEM_2, string pROVEEDOR, string aLMACEN_DESTINO, Nullable<int> cANTIDAD, string dOC_REF_1, string dOC_REF_2, string dOC_REF_3, string dOC_REF_4, string dOC_REF_5, Nullable<System.DateTime> fECHA_TRANSACCION)
+        public virtual int SP_ACTUALIZACION_INVENTARIO(string codCia, string companiaVenta3, string almacenVenta, string tipoMovimiento, string tipoDocumento, string nroDocumento, string codItem2, string proveedor, string almacenDestino, Nullable<int> cantidad, string docRef1, string docRef2, string docRef3, string docRef4, string docRef5, Nullable<System.DateTime> fechaTransaccion)
         {
-            var cOD_CIAParameter = cOD_CIA != null ?
-                new ObjectParameter("COD_CIA", cOD_CIA) :
-                new ObjectParameter("COD_CIA", typeof(string));
+            var codCiaParameter = codCia != null ?
+                new ObjectParameter("codCia", codCia) :
+                new ObjectParameter("codCia", typeof(string));
     
-            var cOMPANIA_VENTA_3Parameter = cOMPANIA_VENTA_3 != null ?
-                new ObjectParameter("COMPANIA_VENTA_3", cOMPANIA_VENTA_3) :
-                new ObjectParameter("COMPANIA_VENTA_3", typeof(string));
+            var companiaVenta3Parameter = companiaVenta3 != null ?
+                new ObjectParameter("companiaVenta3", companiaVenta3) :
+                new ObjectParameter("companiaVenta3", typeof(string));
     
-            var aLMACEN_VENTAParameter = aLMACEN_VENTA != null ?
-                new ObjectParameter("ALMACEN_VENTA", aLMACEN_VENTA) :
-                new ObjectParameter("ALMACEN_VENTA", typeof(string));
+            var almacenVentaParameter = almacenVenta != null ?
+                new ObjectParameter("almacenVenta", almacenVenta) :
+                new ObjectParameter("almacenVenta", typeof(string));
     
-            var tIPO_MOVIMIENTOParameter = tIPO_MOVIMIENTO != null ?
-                new ObjectParameter("TIPO_MOVIMIENTO", tIPO_MOVIMIENTO) :
-                new ObjectParameter("TIPO_MOVIMIENTO", typeof(string));
+            var tipoMovimientoParameter = tipoMovimiento != null ?
+                new ObjectParameter("tipoMovimiento", tipoMovimiento) :
+                new ObjectParameter("tipoMovimiento", typeof(string));
     
-            var tIPO_DOCUMENTOParameter = tIPO_DOCUMENTO != null ?
-                new ObjectParameter("TIPO_DOCUMENTO", tIPO_DOCUMENTO) :
-                new ObjectParameter("TIPO_DOCUMENTO", typeof(string));
+            var tipoDocumentoParameter = tipoDocumento != null ?
+                new ObjectParameter("tipoDocumento", tipoDocumento) :
+                new ObjectParameter("tipoDocumento", typeof(string));
     
-            var nRO_DOCUMENTOParameter = nRO_DOCUMENTO != null ?
-                new ObjectParameter("NRO_DOCUMENTO", nRO_DOCUMENTO) :
-                new ObjectParameter("NRO_DOCUMENTO", typeof(string));
+            var nroDocumentoParameter = nroDocumento != null ?
+                new ObjectParameter("nroDocumento", nroDocumento) :
+                new ObjectParameter("nroDocumento", typeof(string));
     
-            var cOD_ITEM_2Parameter = cOD_ITEM_2 != null ?
-                new ObjectParameter("COD_ITEM_2", cOD_ITEM_2) :
-                new ObjectParameter("COD_ITEM_2", typeof(string));
+            var codItem2Parameter = codItem2 != null ?
+                new ObjectParameter("codItem2", codItem2) :
+                new ObjectParameter("codItem2", typeof(string));
     
-            var pROVEEDORParameter = pROVEEDOR != null ?
-                new ObjectParameter("PROVEEDOR", pROVEEDOR) :
-                new ObjectParameter("PROVEEDOR", typeof(string));
+            var proveedorParameter = proveedor != null ?
+                new ObjectParameter("proveedor", proveedor) :
+                new ObjectParameter("proveedor", typeof(string));
     
-            var aLMACEN_DESTINOParameter = aLMACEN_DESTINO != null ?
-                new ObjectParameter("ALMACEN_DESTINO", aLMACEN_DESTINO) :
-                new ObjectParameter("ALMACEN_DESTINO", typeof(string));
+            var almacenDestinoParameter = almacenDestino != null ?
+                new ObjectParameter("almacenDestino", almacenDestino) :
+                new ObjectParameter("almacenDestino", typeof(string));
     
-            var cANTIDADParameter = cANTIDAD.HasValue ?
-                new ObjectParameter("CANTIDAD", cANTIDAD) :
-                new ObjectParameter("CANTIDAD", typeof(int));
+            var cantidadParameter = cantidad.HasValue ?
+                new ObjectParameter("cantidad", cantidad) :
+                new ObjectParameter("cantidad", typeof(int));
     
-            var dOC_REF_1Parameter = dOC_REF_1 != null ?
-                new ObjectParameter("DOC_REF_1", dOC_REF_1) :
-                new ObjectParameter("DOC_REF_1", typeof(string));
+            var docRef1Parameter = docRef1 != null ?
+                new ObjectParameter("docRef1", docRef1) :
+                new ObjectParameter("docRef1", typeof(string));
     
-            var dOC_REF_2Parameter = dOC_REF_2 != null ?
-                new ObjectParameter("DOC_REF_2", dOC_REF_2) :
-                new ObjectParameter("DOC_REF_2", typeof(string));
+            var docRef2Parameter = docRef2 != null ?
+                new ObjectParameter("docRef2", docRef2) :
+                new ObjectParameter("docRef2", typeof(string));
     
-            var dOC_REF_3Parameter = dOC_REF_3 != null ?
-                new ObjectParameter("DOC_REF_3", dOC_REF_3) :
-                new ObjectParameter("DOC_REF_3", typeof(string));
+            var docRef3Parameter = docRef3 != null ?
+                new ObjectParameter("docRef3", docRef3) :
+                new ObjectParameter("docRef3", typeof(string));
     
-            var dOC_REF_4Parameter = dOC_REF_4 != null ?
-                new ObjectParameter("DOC_REF_4", dOC_REF_4) :
-                new ObjectParameter("DOC_REF_4", typeof(string));
+            var docRef4Parameter = docRef4 != null ?
+                new ObjectParameter("docRef4", docRef4) :
+                new ObjectParameter("docRef4", typeof(string));
     
-            var dOC_REF_5Parameter = dOC_REF_5 != null ?
-                new ObjectParameter("DOC_REF_5", dOC_REF_5) :
-                new ObjectParameter("DOC_REF_5", typeof(string));
+            var docRef5Parameter = docRef5 != null ?
+                new ObjectParameter("docRef5", docRef5) :
+                new ObjectParameter("docRef5", typeof(string));
     
-            var fECHA_TRANSACCIONParameter = fECHA_TRANSACCION.HasValue ?
-                new ObjectParameter("FECHA_TRANSACCION", fECHA_TRANSACCION) :
-                new ObjectParameter("FECHA_TRANSACCION", typeof(System.DateTime));
+            var fechaTransaccionParameter = fechaTransaccion.HasValue ?
+                new ObjectParameter("fechaTransaccion", fechaTransaccion) :
+                new ObjectParameter("fechaTransaccion", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_CONSULTA_INVENTARIO_Result>("SP_CONSULTA_INVENTARIO", cOD_CIAParameter, cOMPANIA_VENTA_3Parameter, aLMACEN_VENTAParameter, tIPO_MOVIMIENTOParameter, tIPO_DOCUMENTOParameter, nRO_DOCUMENTOParameter, cOD_ITEM_2Parameter, pROVEEDORParameter, aLMACEN_DESTINOParameter, cANTIDADParameter, dOC_REF_1Parameter, dOC_REF_2Parameter, dOC_REF_3Parameter, dOC_REF_4Parameter, dOC_REF_5Parameter, fECHA_TRANSACCIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_ACTUALIZACION_INVENTARIO", codCiaParameter, companiaVenta3Parameter, almacenVentaParameter, tipoMovimientoParameter, tipoDocumentoParameter, nroDocumentoParameter, codItem2Parameter, proveedorParameter, almacenDestinoParameter, cantidadParameter, docRef1Parameter, docRef2Parameter, docRef3Parameter, docRef4Parameter, docRef5Parameter, fechaTransaccionParameter);
         }
     
-        public virtual int SP_ELIMINACION_INVENTARIO(string cOD_CIA, string cOMPANIA_VENTA_3, string aLMACEN_VENTA, string tIPO_MOVIMIENTO, string tIPO_DOCUMENTO, string nRO_DOCUMENTO, string cOD_ITEM_2)
+        public virtual int SP_ELIMINACION_INVENTARIO(string codCia, string companiaVenta3, string almacenVenta, string tipoMovimiento, string tipoDocumento, string nroDocumento, string codItem2)
         {
-            var cOD_CIAParameter = cOD_CIA != null ?
-                new ObjectParameter("COD_CIA", cOD_CIA) :
-                new ObjectParameter("COD_CIA", typeof(string));
+            var codCiaParameter = codCia != null ?
+                new ObjectParameter("codCia", codCia) :
+                new ObjectParameter("codCia", typeof(string));
     
-            var cOMPANIA_VENTA_3Parameter = cOMPANIA_VENTA_3 != null ?
-                new ObjectParameter("COMPANIA_VENTA_3", cOMPANIA_VENTA_3) :
-                new ObjectParameter("COMPANIA_VENTA_3", typeof(string));
+            var companiaVenta3Parameter = companiaVenta3 != null ?
+                new ObjectParameter("companiaVenta3", companiaVenta3) :
+                new ObjectParameter("companiaVenta3", typeof(string));
     
-            var aLMACEN_VENTAParameter = aLMACEN_VENTA != null ?
-                new ObjectParameter("ALMACEN_VENTA", aLMACEN_VENTA) :
-                new ObjectParameter("ALMACEN_VENTA", typeof(string));
+            var almacenVentaParameter = almacenVenta != null ?
+                new ObjectParameter("almacenVenta", almacenVenta) :
+                new ObjectParameter("almacenVenta", typeof(string));
     
-            var tIPO_MOVIMIENTOParameter = tIPO_MOVIMIENTO != null ?
-                new ObjectParameter("TIPO_MOVIMIENTO", tIPO_MOVIMIENTO) :
-                new ObjectParameter("TIPO_MOVIMIENTO", typeof(string));
+            var tipoMovimientoParameter = tipoMovimiento != null ?
+                new ObjectParameter("tipoMovimiento", tipoMovimiento) :
+                new ObjectParameter("tipoMovimiento", typeof(string));
     
-            var tIPO_DOCUMENTOParameter = tIPO_DOCUMENTO != null ?
-                new ObjectParameter("TIPO_DOCUMENTO", tIPO_DOCUMENTO) :
-                new ObjectParameter("TIPO_DOCUMENTO", typeof(string));
+            var tipoDocumentoParameter = tipoDocumento != null ?
+                new ObjectParameter("tipoDocumento", tipoDocumento) :
+                new ObjectParameter("tipoDocumento", typeof(string));
     
-            var nRO_DOCUMENTOParameter = nRO_DOCUMENTO != null ?
-                new ObjectParameter("NRO_DOCUMENTO", nRO_DOCUMENTO) :
-                new ObjectParameter("NRO_DOCUMENTO", typeof(string));
+            var nroDocumentoParameter = nroDocumento != null ?
+                new ObjectParameter("nroDocumento", nroDocumento) :
+                new ObjectParameter("nroDocumento", typeof(string));
     
-            var cOD_ITEM_2Parameter = cOD_ITEM_2 != null ?
-                new ObjectParameter("COD_ITEM_2", cOD_ITEM_2) :
-                new ObjectParameter("COD_ITEM_2", typeof(string));
+            var codItem2Parameter = codItem2 != null ?
+                new ObjectParameter("codItem2", codItem2) :
+                new ObjectParameter("codItem2", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_ELIMINACION_INVENTARIO", cOD_CIAParameter, cOMPANIA_VENTA_3Parameter, aLMACEN_VENTAParameter, tIPO_MOVIMIENTOParameter, tIPO_DOCUMENTOParameter, nRO_DOCUMENTOParameter, cOD_ITEM_2Parameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_ELIMINACION_INVENTARIO", codCiaParameter, companiaVenta3Parameter, almacenVentaParameter, tipoMovimientoParameter, tipoDocumentoParameter, nroDocumentoParameter, codItem2Parameter);
         }
     
-        public virtual int SP_INSERCION_INVENTARIO(string cOD_CIA, string cOMPANIA_VENTA_3, string aLMACEN_VENTA, string tIPO_MOVIMIENTO, string tIPO_DOCUMENTO, string nRO_DOCUMENTO, string cOD_ITEM_2, string pROVEEDOR, string aLMACEN_DESTINO, Nullable<int> cANTIDAD, string dOC_REF_1, string dOC_REF_2, string dOC_REF_3, string dOC_REF_4, string dOC_REF_5, Nullable<System.DateTime> fECHA_TRANSACCION)
+        public virtual int SP_INSERCION_INVENTARIO(string codCia, string companiaVenta3, string almacenVenta, string tipoMovimiento, string tipoDocumento, string nroDocumento, string codItem2, string proveedor, string almacenDestino, Nullable<int> cantidad, string docRef1, string docRef2, string docRef3, string docRef4, string docRef5, Nullable<System.DateTime> fechaTransaccion)
         {
-            var cOD_CIAParameter = cOD_CIA != null ?
-                new ObjectParameter("COD_CIA", cOD_CIA) :
-                new ObjectParameter("COD_CIA", typeof(string));
+            var codCiaParameter = codCia != null ?
+                new ObjectParameter("codCia", codCia) :
+                new ObjectParameter("codCia", typeof(string));
     
-            var cOMPANIA_VENTA_3Parameter = cOMPANIA_VENTA_3 != null ?
-                new ObjectParameter("COMPANIA_VENTA_3", cOMPANIA_VENTA_3) :
-                new ObjectParameter("COMPANIA_VENTA_3", typeof(string));
+            var companiaVenta3Parameter = companiaVenta3 != null ?
+                new ObjectParameter("companiaVenta3", companiaVenta3) :
+                new ObjectParameter("companiaVenta3", typeof(string));
     
-            var aLMACEN_VENTAParameter = aLMACEN_VENTA != null ?
-                new ObjectParameter("ALMACEN_VENTA", aLMACEN_VENTA) :
-                new ObjectParameter("ALMACEN_VENTA", typeof(string));
+            var almacenVentaParameter = almacenVenta != null ?
+                new ObjectParameter("almacenVenta", almacenVenta) :
+                new ObjectParameter("almacenVenta", typeof(string));
     
-            var tIPO_MOVIMIENTOParameter = tIPO_MOVIMIENTO != null ?
-                new ObjectParameter("TIPO_MOVIMIENTO", tIPO_MOVIMIENTO) :
-                new ObjectParameter("TIPO_MOVIMIENTO", typeof(string));
+            var tipoMovimientoParameter = tipoMovimiento != null ?
+                new ObjectParameter("tipoMovimiento", tipoMovimiento) :
+                new ObjectParameter("tipoMovimiento", typeof(string));
     
-            var tIPO_DOCUMENTOParameter = tIPO_DOCUMENTO != null ?
-                new ObjectParameter("TIPO_DOCUMENTO", tIPO_DOCUMENTO) :
-                new ObjectParameter("TIPO_DOCUMENTO", typeof(string));
+            var tipoDocumentoParameter = tipoDocumento != null ?
+                new ObjectParameter("tipoDocumento", tipoDocumento) :
+                new ObjectParameter("tipoDocumento", typeof(string));
     
-            var nRO_DOCUMENTOParameter = nRO_DOCUMENTO != null ?
-                new ObjectParameter("NRO_DOCUMENTO", nRO_DOCUMENTO) :
-                new ObjectParameter("NRO_DOCUMENTO", typeof(string));
+            var nroDocumentoParameter = nroDocumento != null ?
+                new ObjectParameter("nroDocumento", nroDocumento) :
+                new ObjectParameter("nroDocumento", typeof(string));
     
-            var cOD_ITEM_2Parameter = cOD_ITEM_2 != null ?
-                new ObjectParameter("COD_ITEM_2", cOD_ITEM_2) :
-                new ObjectParameter("COD_ITEM_2", typeof(string));
+            var codItem2Parameter = codItem2 != null ?
+                new ObjectParameter("codItem2", codItem2) :
+                new ObjectParameter("codItem2", typeof(string));
     
-            var pROVEEDORParameter = pROVEEDOR != null ?
-                new ObjectParameter("PROVEEDOR", pROVEEDOR) :
-                new ObjectParameter("PROVEEDOR", typeof(string));
+            var proveedorParameter = proveedor != null ?
+                new ObjectParameter("proveedor", proveedor) :
+                new ObjectParameter("proveedor", typeof(string));
     
-            var aLMACEN_DESTINOParameter = aLMACEN_DESTINO != null ?
-                new ObjectParameter("ALMACEN_DESTINO", aLMACEN_DESTINO) :
-                new ObjectParameter("ALMACEN_DESTINO", typeof(string));
+            var almacenDestinoParameter = almacenDestino != null ?
+                new ObjectParameter("almacenDestino", almacenDestino) :
+                new ObjectParameter("almacenDestino", typeof(string));
     
-            var cANTIDADParameter = cANTIDAD.HasValue ?
-                new ObjectParameter("CANTIDAD", cANTIDAD) :
-                new ObjectParameter("CANTIDAD", typeof(int));
+            var cantidadParameter = cantidad.HasValue ?
+                new ObjectParameter("cantidad", cantidad) :
+                new ObjectParameter("cantidad", typeof(int));
     
-            var dOC_REF_1Parameter = dOC_REF_1 != null ?
-                new ObjectParameter("DOC_REF_1", dOC_REF_1) :
-                new ObjectParameter("DOC_REF_1", typeof(string));
+            var docRef1Parameter = docRef1 != null ?
+                new ObjectParameter("docRef1", docRef1) :
+                new ObjectParameter("docRef1", typeof(string));
     
-            var dOC_REF_2Parameter = dOC_REF_2 != null ?
-                new ObjectParameter("DOC_REF_2", dOC_REF_2) :
-                new ObjectParameter("DOC_REF_2", typeof(string));
+            var docRef2Parameter = docRef2 != null ?
+                new ObjectParameter("docRef2", docRef2) :
+                new ObjectParameter("docRef2", typeof(string));
     
-            var dOC_REF_3Parameter = dOC_REF_3 != null ?
-                new ObjectParameter("DOC_REF_3", dOC_REF_3) :
-                new ObjectParameter("DOC_REF_3", typeof(string));
+            var docRef3Parameter = docRef3 != null ?
+                new ObjectParameter("docRef3", docRef3) :
+                new ObjectParameter("docRef3", typeof(string));
     
-            var dOC_REF_4Parameter = dOC_REF_4 != null ?
-                new ObjectParameter("DOC_REF_4", dOC_REF_4) :
-                new ObjectParameter("DOC_REF_4", typeof(string));
+            var docRef4Parameter = docRef4 != null ?
+                new ObjectParameter("docRef4", docRef4) :
+                new ObjectParameter("docRef4", typeof(string));
     
-            var dOC_REF_5Parameter = dOC_REF_5 != null ?
-                new ObjectParameter("DOC_REF_5", dOC_REF_5) :
-                new ObjectParameter("DOC_REF_5", typeof(string));
+            var docRef5Parameter = docRef5 != null ?
+                new ObjectParameter("docRef5", docRef5) :
+                new ObjectParameter("docRef5", typeof(string));
     
-            var fECHA_TRANSACCIONParameter = fECHA_TRANSACCION.HasValue ?
-                new ObjectParameter("FECHA_TRANSACCION", fECHA_TRANSACCION) :
-                new ObjectParameter("FECHA_TRANSACCION", typeof(System.DateTime));
+            var fechaTransaccionParameter = fechaTransaccion.HasValue ?
+                new ObjectParameter("fechaTransaccion", fechaTransaccion) :
+                new ObjectParameter("fechaTransaccion", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_INSERCION_INVENTARIO", cOD_CIAParameter, cOMPANIA_VENTA_3Parameter, aLMACEN_VENTAParameter, tIPO_MOVIMIENTOParameter, tIPO_DOCUMENTOParameter, nRO_DOCUMENTOParameter, cOD_ITEM_2Parameter, pROVEEDORParameter, aLMACEN_DESTINOParameter, cANTIDADParameter, dOC_REF_1Parameter, dOC_REF_2Parameter, dOC_REF_3Parameter, dOC_REF_4Parameter, dOC_REF_5Parameter, fECHA_TRANSACCIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_INSERCION_INVENTARIO", codCiaParameter, companiaVenta3Parameter, almacenVentaParameter, tipoMovimientoParameter, tipoDocumentoParameter, nroDocumentoParameter, codItem2Parameter, proveedorParameter, almacenDestinoParameter, cantidadParameter, docRef1Parameter, docRef2Parameter, docRef3Parameter, docRef4Parameter, docRef5Parameter, fechaTransaccionParameter);
         }
     }
 }

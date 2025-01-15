@@ -14,6 +14,24 @@ namespace InventarioDinet.Controllers
         public ActionResult Index()
         {
             DbModelEntities context = new DbModelEntities();
+            var resultado = context.SP_CONSULTA_INVENTARIO(
+                    codCia: null, 
+                    companiaVenta3: null, 
+                    almacenVenta: null, 
+                    tipoMovimiento: null, 
+                    tipoDocumento: null, 
+                    nroDocumento: null, 
+                    codItem2: null,
+                    proveedor: null, 
+                    almacenDestino: null, 
+                    cantidad: null, 
+                    docRef1: null, 
+                    docRef2: null, 
+                    docRef3: null, 
+                    docRef4: null, 
+                    docRef5: null, 
+                    fechaTransaccion: null
+            ).ToList();
             return View(context.MOV_INVENTARIO.ToList());
         }
 

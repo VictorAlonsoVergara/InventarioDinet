@@ -33,67 +33,67 @@
           <Property Name="FECHA_TRANSACCION" Type="date" />
         </EntityType>
         <Function Name="SP_ACTUALIZACION_INVENTARIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="COD_CIA" Type="varchar" Mode="In" />
-          <Parameter Name="COMPANIA_VENTA_3" Type="varchar" Mode="In" />
-          <Parameter Name="ALMACEN_VENTA" Type="varchar" Mode="In" />
-          <Parameter Name="TIPO_MOVIMIENTO" Type="varchar" Mode="In" />
-          <Parameter Name="TIPO_DOCUMENTO" Type="varchar" Mode="In" />
-          <Parameter Name="NRO_DOCUMENTO" Type="varchar" Mode="In" />
-          <Parameter Name="COD_ITEM_2" Type="varchar" Mode="In" />
-          <Parameter Name="PROVEEDOR" Type="varchar" Mode="In" />
-          <Parameter Name="ALMACEN_DESTINO" Type="varchar" Mode="In" />
-          <Parameter Name="CANTIDAD" Type="int" Mode="In" />
-          <Parameter Name="DOC_REF_1" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_2" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_3" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_4" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_5" Type="varchar" Mode="In" />
-          <Parameter Name="FECHA_TRANSACCION" Type="date" Mode="In" />
+          <Parameter Name="codCia" Type="varchar" Mode="In" />
+          <Parameter Name="companiaVenta3" Type="varchar" Mode="In" />
+          <Parameter Name="almacenVenta" Type="varchar" Mode="In" />
+          <Parameter Name="tipoMovimiento" Type="varchar" Mode="In" />
+          <Parameter Name="tipoDocumento" Type="varchar" Mode="In" />
+          <Parameter Name="nroDocumento" Type="varchar" Mode="In" />
+          <Parameter Name="codItem2" Type="varchar" Mode="In" />
+          <Parameter Name="proveedor" Type="varchar" Mode="In" />
+          <Parameter Name="almacenDestino" Type="varchar" Mode="In" />
+          <Parameter Name="cantidad" Type="int" Mode="In" />
+          <Parameter Name="docRef1" Type="varchar" Mode="In" />
+          <Parameter Name="docRef2" Type="varchar" Mode="In" />
+          <Parameter Name="docRef3" Type="varchar" Mode="In" />
+          <Parameter Name="docRef4" Type="varchar" Mode="In" />
+          <Parameter Name="docRef5" Type="varchar" Mode="In" />
+          <Parameter Name="fechaTransaccion" Type="date" Mode="In" />
         </Function>
         <Function Name="SP_CONSULTA_INVENTARIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="COD_CIA" Type="varchar" Mode="In" />
-          <Parameter Name="COMPANIA_VENTA_3" Type="varchar" Mode="In" />
-          <Parameter Name="ALMACEN_VENTA" Type="varchar" Mode="In" />
-          <Parameter Name="TIPO_MOVIMIENTO" Type="varchar" Mode="In" />
-          <Parameter Name="TIPO_DOCUMENTO" Type="varchar" Mode="In" />
-          <Parameter Name="NRO_DOCUMENTO" Type="varchar" Mode="In" />
-          <Parameter Name="COD_ITEM_2" Type="varchar" Mode="In" />
-          <Parameter Name="PROVEEDOR" Type="varchar" Mode="In" />
-          <Parameter Name="ALMACEN_DESTINO" Type="varchar" Mode="In" />
-          <Parameter Name="CANTIDAD" Type="int" Mode="In" />
-          <Parameter Name="DOC_REF_1" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_2" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_3" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_4" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_5" Type="varchar" Mode="In" />
-          <Parameter Name="FECHA_TRANSACCION" Type="date" Mode="In" />
+          <Parameter Name="codCia" Type="varchar" Mode="In" />
+          <Parameter Name="companiaVenta3" Type="varchar" Mode="In" />
+          <Parameter Name="almacenVenta" Type="varchar" Mode="In" />
+          <Parameter Name="tipoMovimiento" Type="varchar" Mode="In" />
+          <Parameter Name="tipoDocumento" Type="varchar" Mode="In" />
+          <Parameter Name="nroDocumento" Type="varchar" Mode="In" />
+          <Parameter Name="codItem2" Type="varchar" Mode="In" />
+          <Parameter Name="proveedor" Type="varchar" Mode="In" />
+          <Parameter Name="almacenDestino" Type="varchar" Mode="In" />
+          <Parameter Name="cantidad" Type="int" Mode="In" />
+          <Parameter Name="docRef1" Type="varchar" Mode="In" />
+          <Parameter Name="docRef2" Type="varchar" Mode="In" />
+          <Parameter Name="docRef3" Type="varchar" Mode="In" />
+          <Parameter Name="docRef4" Type="varchar" Mode="In" />
+          <Parameter Name="docRef5" Type="varchar" Mode="In" />
+          <Parameter Name="fechaTransaccion" Type="date" Mode="In" />
         </Function>
         <Function Name="SP_ELIMINACION_INVENTARIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="COD_CIA" Type="varchar" Mode="In" />
-          <Parameter Name="COMPANIA_VENTA_3" Type="varchar" Mode="In" />
-          <Parameter Name="ALMACEN_VENTA" Type="varchar" Mode="In" />
-          <Parameter Name="TIPO_MOVIMIENTO" Type="varchar" Mode="In" />
-          <Parameter Name="TIPO_DOCUMENTO" Type="varchar" Mode="In" />
-          <Parameter Name="NRO_DOCUMENTO" Type="varchar" Mode="In" />
-          <Parameter Name="COD_ITEM_2" Type="varchar" Mode="In" />
+          <Parameter Name="codCia" Type="varchar" Mode="In" />
+          <Parameter Name="companiaVenta3" Type="varchar" Mode="In" />
+          <Parameter Name="almacenVenta" Type="varchar" Mode="In" />
+          <Parameter Name="tipoMovimiento" Type="varchar" Mode="In" />
+          <Parameter Name="tipoDocumento" Type="varchar" Mode="In" />
+          <Parameter Name="nroDocumento" Type="varchar" Mode="In" />
+          <Parameter Name="codItem2" Type="varchar" Mode="In" />
         </Function>
         <Function Name="SP_INSERCION_INVENTARIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="COD_CIA" Type="varchar" Mode="In" />
-          <Parameter Name="COMPANIA_VENTA_3" Type="varchar" Mode="In" />
-          <Parameter Name="ALMACEN_VENTA" Type="varchar" Mode="In" />
-          <Parameter Name="TIPO_MOVIMIENTO" Type="varchar" Mode="In" />
-          <Parameter Name="TIPO_DOCUMENTO" Type="varchar" Mode="In" />
-          <Parameter Name="NRO_DOCUMENTO" Type="varchar" Mode="In" />
-          <Parameter Name="COD_ITEM_2" Type="varchar" Mode="In" />
-          <Parameter Name="PROVEEDOR" Type="varchar" Mode="In" />
-          <Parameter Name="ALMACEN_DESTINO" Type="varchar" Mode="In" />
-          <Parameter Name="CANTIDAD" Type="int" Mode="In" />
-          <Parameter Name="DOC_REF_1" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_2" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_3" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_4" Type="varchar" Mode="In" />
-          <Parameter Name="DOC_REF_5" Type="varchar" Mode="In" />
-          <Parameter Name="FECHA_TRANSACCION" Type="date" Mode="In" />
+          <Parameter Name="codCia" Type="varchar" Mode="In" />
+          <Parameter Name="companiaVenta3" Type="varchar" Mode="In" />
+          <Parameter Name="almacenVenta" Type="varchar" Mode="In" />
+          <Parameter Name="tipoMovimiento" Type="varchar" Mode="In" />
+          <Parameter Name="tipoDocumento" Type="varchar" Mode="In" />
+          <Parameter Name="nroDocumento" Type="varchar" Mode="In" />
+          <Parameter Name="codItem2" Type="varchar" Mode="In" />
+          <Parameter Name="proveedor" Type="varchar" Mode="In" />
+          <Parameter Name="almacenDestino" Type="varchar" Mode="In" />
+          <Parameter Name="cantidad" Type="int" Mode="In" />
+          <Parameter Name="docRef1" Type="varchar" Mode="In" />
+          <Parameter Name="docRef2" Type="varchar" Mode="In" />
+          <Parameter Name="docRef3" Type="varchar" Mode="In" />
+          <Parameter Name="docRef4" Type="varchar" Mode="In" />
+          <Parameter Name="docRef5" Type="varchar" Mode="In" />
+          <Parameter Name="fechaTransaccion" Type="date" Mode="In" />
         </Function>
         <EntityContainer Name="InventarioDinetModelStoreContainer">
           <EntitySet Name="MOV_INVENTARIO" EntityType="Self.MOV_INVENTARIO" Schema="dbo" store:Type="Tables" />
@@ -131,68 +131,68 @@
         </EntityType>
         <EntityContainer Name="DbModelEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="MOV_INVENTARIO" EntityType="Self.MOV_INVENTARIO" />
-          <FunctionImport Name="SP_ACTUALIZACION_INVENTARIO">
-            <Parameter Name="COD_CIA" Mode="In" Type="String" />
-            <Parameter Name="COMPANIA_VENTA_3" Mode="In" Type="String" />
-            <Parameter Name="ALMACEN_VENTA" Mode="In" Type="String" />
-            <Parameter Name="TIPO_MOVIMIENTO" Mode="In" Type="String" />
-            <Parameter Name="TIPO_DOCUMENTO" Mode="In" Type="String" />
-            <Parameter Name="NRO_DOCUMENTO" Mode="In" Type="String" />
-            <Parameter Name="COD_ITEM_2" Mode="In" Type="String" />
-            <Parameter Name="PROVEEDOR" Mode="In" Type="String" />
-            <Parameter Name="ALMACEN_DESTINO" Mode="In" Type="String" />
-            <Parameter Name="CANTIDAD" Mode="In" Type="Int32" />
-            <Parameter Name="DOC_REF_1" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_2" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_3" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_4" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_5" Mode="In" Type="String" />
-            <Parameter Name="FECHA_TRANSACCION" Mode="In" Type="DateTime" />
-          </FunctionImport>
           <FunctionImport Name="SP_CONSULTA_INVENTARIO" ReturnType="Collection(InventarioDinetModel.SP_CONSULTA_INVENTARIO_Result)">
-            <Parameter Name="COD_CIA" Mode="In" Type="String" />
-            <Parameter Name="COMPANIA_VENTA_3" Mode="In" Type="String" />
-            <Parameter Name="ALMACEN_VENTA" Mode="In" Type="String" />
-            <Parameter Name="TIPO_MOVIMIENTO" Mode="In" Type="String" />
-            <Parameter Name="TIPO_DOCUMENTO" Mode="In" Type="String" />
-            <Parameter Name="NRO_DOCUMENTO" Mode="In" Type="String" />
-            <Parameter Name="COD_ITEM_2" Mode="In" Type="String" />
-            <Parameter Name="PROVEEDOR" Mode="In" Type="String" />
-            <Parameter Name="ALMACEN_DESTINO" Mode="In" Type="String" />
-            <Parameter Name="CANTIDAD" Mode="In" Type="Int32" />
-            <Parameter Name="DOC_REF_1" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_2" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_3" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_4" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_5" Mode="In" Type="String" />
-            <Parameter Name="FECHA_TRANSACCION" Mode="In" Type="DateTime" />
+            <Parameter Name="codCia" Mode="In" Type="String" />
+            <Parameter Name="companiaVenta3" Mode="In" Type="String" />
+            <Parameter Name="almacenVenta" Mode="In" Type="String" />
+            <Parameter Name="tipoMovimiento" Mode="In" Type="String" />
+            <Parameter Name="tipoDocumento" Mode="In" Type="String" />
+            <Parameter Name="nroDocumento" Mode="In" Type="String" />
+            <Parameter Name="codItem2" Mode="In" Type="String" />
+            <Parameter Name="proveedor" Mode="In" Type="String" />
+            <Parameter Name="almacenDestino" Mode="In" Type="String" />
+            <Parameter Name="cantidad" Mode="In" Type="Int32" />
+            <Parameter Name="docRef1" Mode="In" Type="String" />
+            <Parameter Name="docRef2" Mode="In" Type="String" />
+            <Parameter Name="docRef3" Mode="In" Type="String" />
+            <Parameter Name="docRef4" Mode="In" Type="String" />
+            <Parameter Name="docRef5" Mode="In" Type="String" />
+            <Parameter Name="fechaTransaccion" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_ACTUALIZACION_INVENTARIO">
+            <Parameter Name="codCia" Mode="In" Type="String" />
+            <Parameter Name="companiaVenta3" Mode="In" Type="String" />
+            <Parameter Name="almacenVenta" Mode="In" Type="String" />
+            <Parameter Name="tipoMovimiento" Mode="In" Type="String" />
+            <Parameter Name="tipoDocumento" Mode="In" Type="String" />
+            <Parameter Name="nroDocumento" Mode="In" Type="String" />
+            <Parameter Name="codItem2" Mode="In" Type="String" />
+            <Parameter Name="proveedor" Mode="In" Type="String" />
+            <Parameter Name="almacenDestino" Mode="In" Type="String" />
+            <Parameter Name="cantidad" Mode="In" Type="Int32" />
+            <Parameter Name="docRef1" Mode="In" Type="String" />
+            <Parameter Name="docRef2" Mode="In" Type="String" />
+            <Parameter Name="docRef3" Mode="In" Type="String" />
+            <Parameter Name="docRef4" Mode="In" Type="String" />
+            <Parameter Name="docRef5" Mode="In" Type="String" />
+            <Parameter Name="fechaTransaccion" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="SP_ELIMINACION_INVENTARIO">
-            <Parameter Name="COD_CIA" Mode="In" Type="String" />
-            <Parameter Name="COMPANIA_VENTA_3" Mode="In" Type="String" />
-            <Parameter Name="ALMACEN_VENTA" Mode="In" Type="String" />
-            <Parameter Name="TIPO_MOVIMIENTO" Mode="In" Type="String" />
-            <Parameter Name="TIPO_DOCUMENTO" Mode="In" Type="String" />
-            <Parameter Name="NRO_DOCUMENTO" Mode="In" Type="String" />
-            <Parameter Name="COD_ITEM_2" Mode="In" Type="String" />
+            <Parameter Name="codCia" Mode="In" Type="String" />
+            <Parameter Name="companiaVenta3" Mode="In" Type="String" />
+            <Parameter Name="almacenVenta" Mode="In" Type="String" />
+            <Parameter Name="tipoMovimiento" Mode="In" Type="String" />
+            <Parameter Name="tipoDocumento" Mode="In" Type="String" />
+            <Parameter Name="nroDocumento" Mode="In" Type="String" />
+            <Parameter Name="codItem2" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_INSERCION_INVENTARIO">
-            <Parameter Name="COD_CIA" Mode="In" Type="String" />
-            <Parameter Name="COMPANIA_VENTA_3" Mode="In" Type="String" />
-            <Parameter Name="ALMACEN_VENTA" Mode="In" Type="String" />
-            <Parameter Name="TIPO_MOVIMIENTO" Mode="In" Type="String" />
-            <Parameter Name="TIPO_DOCUMENTO" Mode="In" Type="String" />
-            <Parameter Name="NRO_DOCUMENTO" Mode="In" Type="String" />
-            <Parameter Name="COD_ITEM_2" Mode="In" Type="String" />
-            <Parameter Name="PROVEEDOR" Mode="In" Type="String" />
-            <Parameter Name="ALMACEN_DESTINO" Mode="In" Type="String" />
-            <Parameter Name="CANTIDAD" Mode="In" Type="Int32" />
-            <Parameter Name="DOC_REF_1" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_2" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_3" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_4" Mode="In" Type="String" />
-            <Parameter Name="DOC_REF_5" Mode="In" Type="String" />
-            <Parameter Name="FECHA_TRANSACCION" Mode="In" Type="DateTime" />
+            <Parameter Name="codCia" Mode="In" Type="String" />
+            <Parameter Name="companiaVenta3" Mode="In" Type="String" />
+            <Parameter Name="almacenVenta" Mode="In" Type="String" />
+            <Parameter Name="tipoMovimiento" Mode="In" Type="String" />
+            <Parameter Name="tipoDocumento" Mode="In" Type="String" />
+            <Parameter Name="nroDocumento" Mode="In" Type="String" />
+            <Parameter Name="codItem2" Mode="In" Type="String" />
+            <Parameter Name="proveedor" Mode="In" Type="String" />
+            <Parameter Name="almacenDestino" Mode="In" Type="String" />
+            <Parameter Name="cantidad" Mode="In" Type="Int32" />
+            <Parameter Name="docRef1" Mode="In" Type="String" />
+            <Parameter Name="docRef2" Mode="In" Type="String" />
+            <Parameter Name="docRef3" Mode="In" Type="String" />
+            <Parameter Name="docRef4" Mode="In" Type="String" />
+            <Parameter Name="docRef5" Mode="In" Type="String" />
+            <Parameter Name="fechaTransaccion" Mode="In" Type="DateTime" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SP_CONSULTA_INVENTARIO_Result">
@@ -241,7 +241,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="SP_ACTUALIZACION_INVENTARIO" FunctionName="InventarioDinetModel.Store.SP_ACTUALIZACION_INVENTARIO" />
           <FunctionImportMapping FunctionImportName="SP_CONSULTA_INVENTARIO" FunctionName="InventarioDinetModel.Store.SP_CONSULTA_INVENTARIO">
             <ResultMapping>
               <ComplexTypeMapping TypeName="InventarioDinetModel.SP_CONSULTA_INVENTARIO_Result">
@@ -264,6 +263,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_ACTUALIZACION_INVENTARIO" FunctionName="InventarioDinetModel.Store.SP_ACTUALIZACION_INVENTARIO" />
           <FunctionImportMapping FunctionImportName="SP_ELIMINACION_INVENTARIO" FunctionName="InventarioDinetModel.Store.SP_ELIMINACION_INVENTARIO" />
           <FunctionImportMapping FunctionImportName="SP_INSERCION_INVENTARIO" FunctionName="InventarioDinetModel.Store.SP_INSERCION_INVENTARIO" />
         </EntityContainerMapping>
@@ -280,7 +280,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
