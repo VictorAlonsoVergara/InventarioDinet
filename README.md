@@ -14,7 +14,7 @@ A continuación, se presentan unas capturas de pantalla para evidenciar la funci
 
 ![image](https://github.com/user-attachments/assets/53ad0c53-4ab1-41f8-a371-3a0eee822f65)
 
-![image](https://github.com/user-attachments/assets/a9751bb0-f204-4902-aa2f-53f2c87a5c70)
+![image](https://github.com/user-attachments/assets/69aae88c-5438-459e-a456-a9889440069b)
 
 ![image](https://github.com/user-attachments/assets/318c72e1-51f5-45e9-8828-198ddd38c44c)
 
