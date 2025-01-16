@@ -38,19 +38,19 @@ namespace InventarioDinet.Models
         [Display(Name = "Cantidad")]
         public int? CANTIDAD { get; set; }
 
-        [Display(Name = "Documento de Referencia 1")]
+        [Display(Name = "Documento Referencia 1")]
         public string DOC_REF_1 { get; set; }
 
-        [Display(Name = "Documento de Referencia 2")]
+        [Display(Name = "Documento Referencia 2")]
         public string DOC_REF_2 { get; set; }
-
-        [Display(Name = "Documento de Referencia 3")]
+        
+        [Display(Name = "Documento Referencia 3")]
         public string DOC_REF_3 { get; set; }
 
-        [Display(Name = "Documento de Referencia 4")]
+        [Display(Name = "Documento Referencia 4")]
         public string DOC_REF_4 { get; set; }
 
-        [Display(Name = "Documento de Referencia 5")]
+        [Display(Name = "Documento Referencia 5")]
         public string DOC_REF_5 { get; set; }
 
         [Display(Name = "Fecha de Transacción")]
