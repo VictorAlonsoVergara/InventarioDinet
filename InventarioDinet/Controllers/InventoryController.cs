@@ -32,8 +32,7 @@ namespace InventarioDinet.Controllers
                     docRef4: null,
                     docRef5: null,
                     fechaTransaccion: null
-                )
-                .Select(item => new Inventory
+                ).Select(item => new Inventory
                 {
                     COD_CIA = item.COD_CIA,
                     COMPANIA_VENTA_3 = item.COMPANIA_VENTA_3,
@@ -51,8 +50,7 @@ namespace InventarioDinet.Controllers
                     DOC_REF_4 = item.DOC_REF_4,
                     DOC_REF_5 = item.DOC_REF_5,
                     FECHA_TRANSACCION = item.FECHA_TRANSACCION
-                })
-                .ToList();
+                }).ToList();
             return View(inventarios);
         }
 
@@ -78,8 +76,7 @@ namespace InventarioDinet.Controllers
                     docRef4: null,
                     docRef5: null,
                     fechaTransaccion: null
-                )
-                .Select(item => new Inventory
+                ).Select(item => new Inventory
                 {
                     COD_CIA = item.COD_CIA,
                     COMPANIA_VENTA_3 = item.COMPANIA_VENTA_3,
@@ -97,8 +94,7 @@ namespace InventarioDinet.Controllers
                     DOC_REF_4 = item.DOC_REF_4,
                     DOC_REF_5 = item.DOC_REF_5,
                     FECHA_TRANSACCION = item.FECHA_TRANSACCION
-                })
-                .FirstOrDefault();
+                }).FirstOrDefault();
             return View(inventario);
         }
 
@@ -116,25 +112,44 @@ namespace InventarioDinet.Controllers
             {
                 DbModelEntities context = new DbModelEntities();
                 // Verificar si el registro ya existe
-                bool exists = context.MOV_INVENTARIO.Any(x =>
-                    x.COD_CIA == inventario.COD_CIA &&
-                    x.COMPANIA_VENTA_3 == inventario.COMPANIA_VENTA_3 &&
-                    x.ALMACEN_VENTA == inventario.ALMACEN_VENTA &&
-                    x.TIPO_MOVIMIENTO == inventario.TIPO_MOVIMIENTO &&
-                    x.TIPO_DOCUMENTO == inventario.TIPO_DOCUMENTO &&
-                    x.NRO_DOCUMENTO == inventario.NRO_DOCUMENTO
-                );
+                var registro = context.SP_CONSULTA_INVENTARIO(inventario.COD_CIA, 
+                    inventario.COMPANIA_VENTA_3, 
+                    inventario.ALMACEN_VENTA,
+                    inventario.TIPO_MOVIMIENTO, 
+                    inventario.TIPO_DOCUMENTO, 
+                    inventario.NRO_DOCUMENTO, 
+                    inventario.COD_ITEM_2,
+                    proveedor: null,
+                    almacenDestino: null,
+                    cantidad: null,
+                    docRef1: null,
+                    docRef2: null,
+                    docRef3: null,
+                    docRef4: null,
+                    docRef5: null,
+                    fechaTransaccion: null).FirstOrDefault();
 
-                if (exists)
+                if(registro != null)
                 {
                     ViewBag.ErrorMessage = "El registro ya existe en la base de datos";
                     return View(inventario);
                 }
 
-                context.SP_INSERCION_INVENTARIO(inventario.COD_CIA, inventario.COMPANIA_VENTA_3, inventario.ALMACEN_VENTA,
-                    inventario.TIPO_MOVIMIENTO, inventario.TIPO_DOCUMENTO, inventario.NRO_DOCUMENTO, inventario.COD_ITEM_2,
-                    inventario.PROVEEDOR, inventario.ALMACEN_DESTINO, inventario.CANTIDAD, inventario.DOC_REF_1,
-                    inventario.DOC_REF_2, inventario.DOC_REF_3, inventario.DOC_REF_4, inventario.DOC_REF_5, 
+                context.SP_INSERCION_INVENTARIO(inventario.COD_CIA, 
+                    inventario.COMPANIA_VENTA_3, 
+                    inventario.ALMACEN_VENTA,
+                    inventario.TIPO_MOVIMIENTO, 
+                    inventario.TIPO_DOCUMENTO, 
+                    inventario.NRO_DOCUMENTO, 
+                    inventario.COD_ITEM_2,
+                    inventario.PROVEEDOR, 
+                    inventario.ALMACEN_DESTINO, 
+                    inventario.CANTIDAD, 
+                    inventario.DOC_REF_1,
+                    inventario.DOC_REF_2, 
+                    inventario.DOC_REF_3, 
+                    inventario.DOC_REF_4, 
+                    inventario.DOC_REF_5, 
                     inventario.FECHA_TRANSACCION);
                 return RedirectToAction("Index");
             }
@@ -165,8 +180,7 @@ namespace InventarioDinet.Controllers
                     docRef4: null,
                     docRef5: null,
                     fechaTransaccion: null
-                )
-                .Select(item => new Inventory
+                ).Select(item => new Inventory
                 {
                     COD_CIA = item.COD_CIA,
                     COMPANIA_VENTA_3 = item.COMPANIA_VENTA_3,
@@ -184,8 +198,7 @@ namespace InventarioDinet.Controllers
                     DOC_REF_4 = item.DOC_REF_4,
                     DOC_REF_5 = item.DOC_REF_5,
                     FECHA_TRANSACCION = item.FECHA_TRANSACCION
-                })
-                .FirstOrDefault();
+                }).FirstOrDefault();
             return View(inventario);
         }
 
@@ -196,10 +209,21 @@ namespace InventarioDinet.Controllers
             try
             {
                 DbModelEntities context = new DbModelEntities();
-                context.SP_ACTUALIZACION_INVENTARIO(inventario.COD_CIA, inventario.COMPANIA_VENTA_3, inventario.ALMACEN_VENTA,
-                    inventario.TIPO_MOVIMIENTO, inventario.TIPO_DOCUMENTO, inventario.NRO_DOCUMENTO, inventario.COD_ITEM_2,
-                    inventario.PROVEEDOR, inventario.ALMACEN_DESTINO, inventario.CANTIDAD, inventario.DOC_REF_1,
-                    inventario.DOC_REF_2, inventario.DOC_REF_3, inventario.DOC_REF_4, inventario.DOC_REF_5,
+                context.SP_ACTUALIZACION_INVENTARIO(inventario.COD_CIA, 
+                    inventario.COMPANIA_VENTA_3, 
+                    inventario.ALMACEN_VENTA,
+                    inventario.TIPO_MOVIMIENTO, 
+                    inventario.TIPO_DOCUMENTO, 
+                    inventario.NRO_DOCUMENTO, 
+                    inventario.COD_ITEM_2,
+                    inventario.PROVEEDOR, 
+                    inventario.ALMACEN_DESTINO, 
+                    inventario.CANTIDAD, 
+                    inventario.DOC_REF_1,
+                    inventario.DOC_REF_2, 
+                    inventario.DOC_REF_3, 
+                    inventario.DOC_REF_4, 
+                    inventario.DOC_REF_5,
                     inventario.FECHA_TRANSACCION);
                 return RedirectToAction("Index");
             }
@@ -230,8 +254,7 @@ namespace InventarioDinet.Controllers
                     docRef4: null,
                     docRef5: null,
                     fechaTransaccion: null
-                )
-                .Select(item => new Inventory
+                ).Select(item => new Inventory
                 {
                     COD_CIA = item.COD_CIA,
                     COMPANIA_VENTA_3 = item.COMPANIA_VENTA_3,
@@ -249,8 +272,7 @@ namespace InventarioDinet.Controllers
                     DOC_REF_4 = item.DOC_REF_4,
                     DOC_REF_5 = item.DOC_REF_5,
                     FECHA_TRANSACCION = item.FECHA_TRANSACCION
-                })
-                .FirstOrDefault();
+                }).FirstOrDefault();
             return View(inventario);
         }
 
@@ -261,8 +283,7 @@ namespace InventarioDinet.Controllers
             try
             {
                 DbModelEntities context = new DbModelEntities();
-                context.SP_ELIMINACION_INVENTARIO(codCia, companiaVenta3, almacenVenta, tipoMovimiento, tipoDocumento, 
-                    nroDocumento, codItem2);
+                context.SP_ELIMINACION_INVENTARIO(codCia,companiaVenta3,almacenVenta,tipoMovimiento,tipoDocumento,nroDocumento,codItem2);
                 return RedirectToAction("Index");
             }
             catch
