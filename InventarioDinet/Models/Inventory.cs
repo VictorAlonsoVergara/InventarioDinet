@@ -8,7 +8,7 @@ namespace InventarioDinet.Models
 {
     public class Inventory
     {
-        [Display(Name = "Código Compañía")]
+        [Display(Name = "Código de Compañía")]
         public string COD_CIA { get; set; }
 
         [Display(Name = "Compañía de Venta")]
