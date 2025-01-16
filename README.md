@@ -4,7 +4,7 @@ Para la construcción del proyecto hice uso de ASP.NET MVC Framework con C# en e
 
 Se siguieron los siguientes pasos para la solución:
 - Para la conexión de la base de datos con el proyecto se utilizó el paquete "EntityFramework".
-- Se creó la tabla, se insertó datos y se desarrollaron los "Stored Procedures" siguiendo los pasos mencionados en el ejercicio técnico.
+- Se creó una nueva base de datos denominada "InventarioDinet", se agregó la tabla "MOV_INVENTARIO", se insertó datos y se desarrollaron los "Stored Procedures" siguiendo los pasos mencionados en el ejercicio técnico.
 - Se creó el modelo de base de datos (archivo edmx) dentro del proyecto en base a lo mencionado en el punto anterior y se utilizó una cadena de conexión a mi base de datos el cual se encuentra en el archivo "Web.config".
 - Luego, se creó la clase "Inventory" y se colocaron los nombres de los datos de la tabla con los que se visualizan en pantalla.
 - Posteriormente, se creó la clase "InventoryController" en donde se utilizaron los "Stored Procedures" en cada método de gestión de inventario correspondiente.
