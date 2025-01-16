@@ -115,6 +115,22 @@ namespace InventarioDinet.Controllers
             try
             {
                 DbModelEntities context = new DbModelEntities();
+                // Verificar si el registro ya existe
+                bool exists = context.MOV_INVENTARIO.Any(x =>
+                    x.COD_CIA == inventario.COD_CIA &&
+                    x.COMPANIA_VENTA_3 == inventario.COMPANIA_VENTA_3 &&
+                    x.ALMACEN_VENTA == inventario.ALMACEN_VENTA &&
+                    x.TIPO_MOVIMIENTO == inventario.TIPO_MOVIMIENTO &&
+                    x.TIPO_DOCUMENTO == inventario.TIPO_DOCUMENTO &&
+                    x.NRO_DOCUMENTO == inventario.NRO_DOCUMENTO
+                );
+
+                if (exists)
+                {
+                    ViewBag.ErrorMessage = "El registro ya existe en la base de datos";
+                    return View(inventario);
+                }
+
                 context.SP_INSERCION_INVENTARIO(inventario.COD_CIA, inventario.COMPANIA_VENTA_3, inventario.ALMACEN_VENTA,
                     inventario.TIPO_MOVIMIENTO, inventario.TIPO_DOCUMENTO, inventario.NRO_DOCUMENTO, inventario.COD_ITEM_2,
                     inventario.PROVEEDOR, inventario.ALMACEN_DESTINO, inventario.CANTIDAD, inventario.DOC_REF_1,

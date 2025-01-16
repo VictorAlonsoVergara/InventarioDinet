@@ -6,11 +6,16 @@
 
 <h2>Crear</h2>
 
+@if (ViewBag.ErrorMessage != null)
+{
+<div class="alert alert-danger">
+    @ViewBag.ErrorMessage
+</div>}
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Inventario</h4>
         <hr />
@@ -138,7 +143,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FECHA_TRANSACCION, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.FECHA_TRANSACCION, new { htmlAttributes = new { @class = "form-control", @type = "date"} })
+                @Html.EditorFor(model => model.FECHA_TRANSACCION, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
                 @Html.ValidationMessageFor(model => model.FECHA_TRANSACCION, "", new { @class = "text-danger" })
             </div>
         </div>
