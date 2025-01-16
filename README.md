@@ -12,10 +12,10 @@ Se siguieron los siguientes pasos para la solución:
 
 A continuación, se presentan unas capturas de pantalla para evidenciar la funcionalidad:
 
-![image](https://github.com/user-attachments/assets/53ad0c53-4ab1-41f8-a371-3a0eee822f65)
+![image](https://github.com/user-attachments/assets/3b8611b8-5d96-4187-9e40-6d91e62b2c34)
 
-![image](https://github.com/user-attachments/assets/69aae88c-5438-459e-a456-a9889440069b)
+![image](https://github.com/user-attachments/assets/61f45753-1171-411b-865d-b4005b576e31)
 
-![image](https://github.com/user-attachments/assets/318c72e1-51f5-45e9-8828-198ddd38c44c)
+![image](https://github.com/user-attachments/assets/6f973011-4cfc-4227-b707-c7bc6238cc6b)
 
 Nota: Se han agregado los scripts de los "Stored Procedures" al repositorio.
